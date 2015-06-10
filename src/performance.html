@@ -26,8 +26,78 @@
     <body>
         <div class="off-canvas-wrap" data-offcanvas>
             <div class="inner-wrap">
-                {{> header }}
-                {{> body }}
+                <nav class="tab-bar">
+  <section class="left-small">
+    <a href="#idOfLeftMenu" role="button" aria-controls="idOfLeftMenu" aria-expanded="false" class="left-off-canvas-toggle menu-icon"><span></span></a>
+	</section>
+  <section class="middle tab-bar-section">
+    <h1 class="title"><i class="fa fa-eye-slash"></i>Cottleston</h1>
+
+  </section>
+  <section class="right-small">
+    <a href="#idOfRightMenu" role="button" aria-controls="idOfRightMenu" aria-expanded="false" class="right-off-canvas-toggle menu-icon"><span></span></a>
+  </section>
+</nav>
+<aside class="left-off-canvas-menu">
+	<ul class="off-canvas-list">
+    <li><label><i class="fa fa-list-ul"></i>Build Checklist</label></li>
+    <li><a href="bestpractices.html"><i class="fa fa-check-square-o"></i>Best Practises</a></li>
+    <li><a href="donts.html"><i class="fa fa-check-square-o"></i>Don'ts</a></li>
+    <li><a href="mobile.html"><i class="fa fa-check-square-o"></i>Mobile Ready</a></li>
+    <li><a href="analysis.html"><i class="fa fa-check-square-o"></i>Analysis</a></li>
+    <li><a href="performance.html"><i class="fa fa-check-square-o"></i>Performance</a></li>
+    <li><a href="usability.html"><i class="fa fa-check-square-o"></i>Usability</a></li>
+    <li><a href="semantics.html"><i class="fa fa-check-square-o"></i>Semantic</a></li>
+    <li><a href="seo.html"><i class="fa fa-check-square-o"></i>SEO</a></li>
+    <li><a href="code.html"><i class="fa fa-check-square-o"></i>Code</a></li>
+    <li><a href="accessibility.html"><i class="fa fa-check-square-o"></i>Accessibility</a></li>
+    <li><a href="security.html"><i class="fa fa-check-square-o"></i>Security</a></li>
+  </ul>
+</aside>
+<aside class="right-off-canvas-menu">
+  <ul class="off-canvas-list">
+    <li><label><i class="fa fa-list-ul"></i>Design</label></li>
+    <li><a href="layout.html"><i class="fa fa-pencil"></i>Layout</a></li>
+    <li><a href="bootstrap.html"><i class="fa fa-pencil"></i>Bootstrap</a></li>
+    <li><a href="staticgen.html"><i class="fa fa-pencil"></i>Static Sites</a></li>
+  </ul>
+</aside>
+                
+
+<div class="performance row">
+	<div class="small-8 small-centered columns">
+		<div class="panel callout radius">
+			<h4 class="text-center">Speed Scores</h4>
+			<ul>
+				<li><a href="https://developers.google.com/speed/pagespeed/">Google Page Speed</a></li>
+				<li><a href="http://yslow.org/">Yahoo YSlow</a></li>
+				<li><a href="http://gtmetrix.com/">GTMetrix</a></li>
+			</ul>
+		</div>
+		<div class="panel callout radius">
+			<h4 class="text-center">Optimise Images</h4>
+			<ul>
+				<li><a href="http://www.smushit.com/ysmush.it/">Smushit</a></li>
+				<li><a href="http://punypng.com/">Puny PNG</a></li>
+				<li><a href="http://pnggauntlet.com/">PNGGauntlet</a></li>
+				<li><a href="http://imageoptim.com/">Image Optim</a></li>
+			</ul>
+		</div>
+		<div class="panel callout radius">
+			<h4 class="text-center">Headers</h4>
+			<ul>
+				<li><a href="https://redbot.org/">HTTP Headers</a></li>
+			</ul>
+		</div>
+		<div class="panel callout radius">
+			<h4 class="text-center">Rankings</h4>
+			<ul>
+				<li><a href="https://woorank.com/">Woorank</a></li>
+			</ul>
+		</div>
+	</div>
+</div>
+<a class="exit-off-canvas"></a>
             </div>
         </div>
         <!-- build:js js/vendor/jquery.js -->

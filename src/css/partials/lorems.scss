@@ -1,0 +1,23 @@
+.loremtxt {
+
+    .panel {
+        font-family:'Lato',serif;
+    }
+    .sample{
+        font-family:'Quicksand',serif;
+        margin-bottom:7px;
+        margin-top:2px;
+        font-size:2.25vw;
+        color:inherit;
+        text-overflow:ellipsis;
+        white-space: pre-line;
+        font-weight:300;
+        overflow:hidden;
+        // height:65px;
+    }
+    .title {
+       font-family:'Lato',serif;
+       font-size:2.2vw;
+       text-transform: uppercase;
+    }
+}

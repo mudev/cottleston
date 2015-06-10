@@ -1,0 +1,17 @@
+---
+title: Static Site Generation
+
+---
+
+<div id="sorts" class="button-group">
+  <button class="button is-checked" data-sort-value="original-order">original order</button>
+  <button class="button" data-sort-value="stars">stars</button>
+  <button class="button" data-sort-value="title">title</button>
+  <button class="button" data-sort-value="language">language</button>
+</div>
+<div class="row">
+    <div class="projects">
+        {{#each staticgen.list}}{{> staticpanel}}{{/each}}
+    </div>
+</div>
+<a class="exit-off-canvas"></a>

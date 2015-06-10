@@ -148,6 +148,7 @@ module.exports = function (grunt) {
         },
         compass: {
             options: {
+                require: ['font-awesome-sass'],
                 sassDir: '<%= yeoman.src %>/css',
                 cssDir: '.tmp/css',
                 generatedImagesDir: '.tmp/images/generated',
@@ -191,7 +192,8 @@ module.exports = function (grunt) {
             options: {
                 flatten: true,
                 layout: '<%= yeoman.src %>/templates/layouts/default.hbs',
-                partials: '<%= yeoman.src %>/templates/partials/*.hbs'
+                partials: '<%= yeoman.src %>/templates/partials/*.hbs',
+                data: '<%= yeoman.src %>/js/*.{js,json}'
             },
             pages: {
                 files: {

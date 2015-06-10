@@ -1,0 +1,19 @@
+{
+	"list": [
+		{"title": "BrowserStack","price": "$39 - $399pcm","description": "live, web-based browser testing with instant access to every desktop and mobile browser (currently more than 300)","type": "Web Service","link": "http://www.browserstack.com/"},
+		{"title":"BrowserShots","price":"Free - $29.95pcm","description":"open-source web app","type":"Web Service","link":"http://browsershots.org/"},
+		{"title":"Browserling","price":"Free - $250pcm","description":"StackVM: powered by canvas and js","type":"Web Service","link":"https://browserling.com/"},
+		{"title":"Spoon.net","price":"Free - $99pcm","description":"browser sandbox(currently Windows-only)","type":"Web Service","link":"http://spoon.net/browsers/"},
+		{"title":"Modern IE","price":"Free","description":"VMWare and Vbox images for all the IE browsers","type":"Local","link":"https://www.modern.ie/en-us"},
+		{"title":"Ghostlab","price":"$49","description":"","type":"Local","link":""},
+		{"title":"Sauce Labs","price":"$12-$149pcm","description":"","type":"Web Service","link":"https://saucelabs.com/home"},
+		{"title":"Browsera","price":"Free - $99pcm","description":"","type":"Web Service","link":"http://www.browsera.com/"},
+		{"title":"Mogotest","price":"$99-$499pcm","description":"","type":"Web Service","link":"http://mogotest.com/"},
+		{"title":"IENetRenderer","price":"Free","description":"Internet Explorer 5.5 through 11","type":"Web Service","link":"http://netrenderer.com/"},
+		{"title":"Litmus","price":"$79-$399pcm","description":"Email and cross-browser testing","type":"Web Service","link":"http://litmus.com/page-tests/"},
+		{"title":"BrowseEmAll","price":"$69 - $349","description":"Email and cross-browser testing","type":"Web Service","link":"http://www.browseemall.com/Home/"},
+		{"title":"TestingBot","price":"$40 - $250pcm","description":"Selenium based","type":"Web Service","link":"http://testingbot.com/"},
+		{"title":"Browserbite","price":"$39 - $999pcm","description":"45 mobile devices &amp; browsers","type":"Web Service","link":"http://browserbite.com/"},
+		{"title":"CrossBrowserTesting","price":"$29.95 - $199.95pcm","description":"live testing environment","type":"Web Service","link":"https://crossbrowsertesting.com/"}
+	]
+}

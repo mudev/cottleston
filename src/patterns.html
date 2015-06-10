@@ -10,9 +10,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
         <!-- build:css({.tmp,src}) css/styles.css -->
-        <link href='http://fonts.googleapis.com/css?family=Quicksand' rel='stylesheet' type='text/css'>
         <link rel="stylesheet" href="css/styles.css">
-        <link href='http://fonts.googleapis.com/css?family=Lato&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
         <!-- endbuild -->
         <!-- build:js js/vendor/modernizr.js -->
         <script src="bower_components/modernizr/modernizr.js"></script>
@@ -26,8 +24,45 @@
     <body>
         <div class="off-canvas-wrap" data-offcanvas>
             <div class="inner-wrap">
-                {{> header }}
-                {{> body }}
+                <nav class="tab-bar">
+  <section class="left-small">
+    <a href="#idOfLeftMenu" role="button" aria-controls="idOfLeftMenu" aria-expanded="false" class="left-off-canvas-toggle menu-icon" ><span></span></a>
+	</section>
+  <section class="middle tab-bar-section">
+    <h1 class="title">Cottleston</h1>
+  </section>
+  <section class="right-small">
+    <a href="#idOfRightMenu" role="button" aria-controls="idOfRightMenu" aria-expanded="false" class="right-off-canvas-toggle menu-icon" ><span></span></a>
+  </section>
+</nav>
+<aside class="left-off-canvas-menu">
+	<ul class="off-canvas-list">
+    <li><label>Build Checklist</label></li>
+    <li><a href="bestpractices.html">Best Practises</a></li>
+    <li><a href="donts.html">Don'ts</a></li>
+    <li><a href="#">Mobile Ready</a></li>
+    <li><a href="#">Analytics</a></li>
+    <li><a href="performance.html">Performance</a></li>
+    <li><a href="#">Usability</a></li>
+    <li><a href="#">Semantic</a></li>
+    <li><a href="#">SEO</a></li>
+    <li><a href="#">Code</a></li>
+    <li><a href="#">Accessibility</a></li>
+    <li><a href="#">Security</a></li>
+    <li><a href="#">Social Media</a></li>
+  </ul>
+</aside>
+<aside class="right-off-canvas-menu">
+  <ul class="off-canvas-list">
+    <li><label>Users</label></li>
+    <li><a href="#">Hari Seldon</a></li>
+    <li><a href="#"></a></li>
+  </ul>
+</aside>
+                
+<p>You could use this page to build a pattern library or style guide.</p>
+<p><a href="index.html" title="Index">&larr; Index</a></p>
+
             </div>
         </div>
         <!-- build:js js/vendor/jquery.js -->
@@ -36,6 +71,7 @@
         <!-- <script src="bower_components/foundation/js/vendor/jquery.js"></script> -->
         <script src="bower_components/foundation/js/foundation.js"></script>
         <script src="bower_components/foundation/js/foundation/foundation.offcanvas.js"></script>
+        <script src="bower_components/foundation/js/foundation/foundation.equalizer.js"></script>
         <script src="bower_components/isotope/dist/isotope.pkgd.js"></script>
 
         <!-- endbuild -->
@@ -46,37 +82,31 @@
         <script src="js/plugins.js"></script>
         <script>$(document).foundation();</script>
         <script type="text/javascript">
-        $(function() {
-            var $container = $('.pricing-table');
-            $container.isotope({
-                itemSelector: '.item',
-                layoutMode: 'fitRows',
-                getSortData: {
-                    title: '.title',
-                    language: '[data-language]',
-                    stars: '[data-stars]',
-                    issues: '[data-issues]'
-                },
-                sortAscending: {
-                    name: true,
-                    language: true,
-                    stars: true,
-                    issues: false
-                  }
-            });
-            $('#sorts').on('click', 'button', function() {
-                var sortByValue = $(this).attr('data-sort-by');
-                $container.isotope({ sortBy: sortByValue });
-            });
-            // change is-checked class on buttons
-            $('.button-group').each( function(i, buttonGroup ) {
-                var $buttonGroup = $(buttonGroup);
-                $buttonGroup.on('click', 'button', function() {
-                    $buttonGroup.find('.is-checked').removeClass('.is-checked');
-                    $( this ).addClass('.is-checked');
+                var $container = $('#browsers');
+                $container.isotope({
+                    itemSelector: '.item',
+                    getSortData: {
+                        name: '.title',
+                        category: '[data-category]',
+                        weight: function( itemElem ) { // function
+                            var weight = $( itemElem ).find('.weight').text();
+                            return parseFloat( weight.replace( /[\(\)]/g, '') );
+                        }
+                    },
+                    sortBy: 'category'
                 });
-            });
-        });
+                $('#sorts').on('click', 'button', function() {
+                    var sortByValue = $(this).attr('data-sort-by');
+                    $container.isotope({ sortBy: sortByValue });
+                });
+                // change is-checked class on buttons
+                $('.button-group').each( function( i, buttonGroup ) {
+                    var $buttonGroup = $( buttonGroup );
+                    $buttonGroup.on( 'click', 'button', function() {
+                        $buttonGroup.find('.is-checked').removeClass('is-checked');
+                        $( this ).addClass('is-checked');
+                    });
+                });
         </script>
         <!-- endbuild -->
     </body>

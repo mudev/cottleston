@@ -2,10 +2,12 @@
   "name": "cottleston",
   "version": "0.0.0",
   "dependencies": {
-    "foundation": ">=5.0.2",
+    "foundation": "5.5.0",
     "bourbon": "4.0.2",
     "modernizr": "~2.6.2",
-    "jquery": "~1.9.1"
+    "jquery": "~2.1.2"
   },
-  "devDependencies": {}
+  "devDependencies": {
+  	"isotope": "~2.1.0"
+  }
 }
